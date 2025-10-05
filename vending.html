@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="th">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ตู้ทำไข่เจียวอัตโนมัติ</title>
+  <link rel="stylesheet" href="vending.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="container">
+      <div>
+        <div style="text-align: center;">
+          <h1 style=" background-color: rgba(206, 144, 0, 0.216); padding: 7px; border-radius: 10px;">
+            เครื่องทำไข่เจียวอัตโนมัติ</h1>
+        </div>
+        <div class="tabs" id="tabs"></div>
+        <div class="items-grid" id="itemsGrid"></div>
+      </div>
+      <div class="right">
+        <h2
+          style="margin:0 0 12px; margin-top: 80px; background: #2eae0057; padding: 10px; text-align: center; border-radius: 10px;">
+          ช่องใส่เงิน</h2>
+        <div class="denoms" id="denoms"></div>
+        <div class="summary">
+          <div style="font-size:20px; color:var(--muted)">ยอดใส่ทั้งหมด</div>
+          <div id="inserted" style="font-weight:700;font-size:22px">0 บาท</div>
+          <div class="actions">
+            <div>
+              <div style="font-size:20px; color:var(--muted)">รวมราคาสินค้าทั้งหมด</div>
+              <div id="totalPrice" style="font-weight:700; font-size:20px">0 บาท</div>
+            </div>
+
+            <div style="display:flex;gap:8px">
+              <button class="btn primary" id="calcBtn">คิดเงิน</button>
+              <button class="btn ghost" id="resetBtn">รีเซ็ต</button>
+            </div>
+          </div>
+          <div id="msg" style="margin-top:10px;color:#c00;font-size:14px"></div>
+        </div>
+        <div class="help">
+          <div id="manualBtn" style="cursor:pointer;">
+            คู่มือการใช้งาน
+          </div>
+
+          <div id="manualModal" class="modal-ex">
+            <div class="modal-content">
+              <span class="close" style="color: rgb(0, 0, 0);">&times;</span>
+              <img id="manualImage" src="images/manual1.png" >
+              <div class="arrows">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modalRoot" style="display:none"></div>
+  </div>
+
+  <script src="vending.js"></script>
+</body>
+
+</html>
